@@ -1,0 +1,101 @@
+
+
+## 1. Initial Setup
+
+git config --global user.name "Your Name"    # Set username globally
+git config --global user.email "email@example.com"    # Set email globally
+
+
+## 2. Starting a Repository
+
+git init    # Initialize a new local repository
+git clone <repository-url>    # Clone/download an existing repository
+
+
+## 3. Basic Workflow Commands
+
+git status    # Check status of working directory
+git add <filename>    # Add specific file to staging area
+git add .    # Add all changes to staging area
+git commit -m "commit message"    # Commit staged changes with a message
+git commit -am "message"    # Add tracked files and commit in one step
+git commit --amend    # Modify the last commit
+git commit --amend -m "new message"    # Amend last commit with new message
+git commit --no-edit    # Commit using previous message
+
+
+## 4. Working with Remotes
+
+git remote add origin <repository-url>    # Connect local to remote repository
+git push origin <branch-name>    # Push commits to remote repository
+git pull origin <branch-name>    # Pull latest changes from remote repository
+git fetch    # Download changes from remote without merging
+
+
+## 5. Branch Operations
+
+git branch --show-current    # Show current branch name
+git switch <branch>    # Switch branches (Git 2.23+)
+git checkout <branch-name>    # Switch to specified branch
+git checkout -b <branch-name>    # Create and switch to new branch
+git switch -c <branch>    # Create and switch branch
+
+# Advanced Branch Operations
+git branch --merged    # List merged branches
+git branch --no-merged    # List unmerged branches
+git branch -m <old> <new>    # Rename branch
+
+
+## 6. History and Differences
+
+git log    # View commit history
+git log --oneline    # View simplified commit history
+git log -n "like 2". #to view no of commits
+git log --pretty=full/short #to view
+git log --since="one week ago" 
+git log --author="ram"
+git diff    # Show changes between working directory and staging
+git diff --staged    # Show changes between staging and last commit
+
+
+## 7. Undoing Changes
+
+git reset <file>    # Unstage changes but preserve them
+git reset --hard HEAD    # Discard all local changes
+git revert <commit-hash>    # Create new commit that undoes specified commit
+git rm <file>    # Remove file from working directory and staging area
+git reset --soft #commit id. # to revert commit
+
+
+## 8. Stashing Changes
+
+git stash    # Temporarily save uncommitted changes
+git stash list    # List all stashed changes
+git stash pop    # Apply most recent stash and remove it
+git stash apply    # Apply most recent stash but keep it
+
+
+## 9. Advanced Operations
+
+git rebase <branch-name>    # Reapply commits on top of another base
+git tag <tag-name>    # Create a new tag
+git cherry-pick <commit-hash>    # Apply specific commit to current branch
+
+
+## 10. Cleaning Up
+
+git clean -n    # Show which files would be removed
+git clean -f    # Remove untracked files
+git branch -d <branch-name>    # Delete a branch
+
+   # Remove references to deleted remote branches
+
+git remote prune origin    # Remove references to deleted remote branches
+
+
+
+### File Management
+
+git rm --cached <file>    # Remove file from Git tracking but keep locally
+git clean -fd    # Remove untracked files and directories forcefully
+git update-index --assume-unchanged <file>    # Ignore changes to tracked file
