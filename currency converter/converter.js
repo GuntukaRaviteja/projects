@@ -6,7 +6,7 @@ let img1=document.querySelector(".img1");
 let conver=document.querySelector(".conver1");
 let butt=document.querySelector("#butt");
 let amount=document.querySelector("#amount");
-const base_url="https://v6.exchangerate-api.com/v6/6c871ca496818f1c0eb68c7b/pair";
+const base_url=""keynase;
 
 
 from.innerHTML="<option>US</option>";
